@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  SwiftUIDemo
-//
-//  Created by FuRyang on 2021/12/29.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -33,7 +26,8 @@ struct ContentView: View {
             TextField("Enter text here", text: $text)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
-            Picker(selection: $colorIndex, label: Text("Color")){
+            
+            Picker(selection: $colorIndex, label: Text("Color")) {
                 ForEach (0 ..< colornames.count){
                     Text(self.colornames[$0])
                         .foregroundColor(self.colors[$0])
